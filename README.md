@@ -32,7 +32,7 @@ Script or code point normalization is not mandatory as pypinyin accepts Unihan a
 NN Dimensions
 -------------
 
-Our basic idea is one-hot vectors covering printable ASCII, bopomofo, and NUL/NL (as end of sequence marker) — `127 - 31 + 41 = 137` dimensions. Extra 8-bit range may be considered for UTF-8 support as everyone loves to use emojis. With UTF-8 added, we have `137 + 128 - 13 = 252` dimensions.  🌚
+Our basic idea is one-hot vectors covering printable ASCII, bopomofo, and NUL/NL (as end of sequence marker) — `127 - 31 + 41 = 137` dimensions. Extra 8-bit range may be considered for UTF-8 support as everyone loves to use emojis. With UTF-8 added, we have `137 + 128 - 13 = 252` dimensions. An extra 6+1 dimensions can be removed assuming all CJK Unified Ideographs are consumed, plus PUA ditched. 🌚
 
 Input Method
 ------------
